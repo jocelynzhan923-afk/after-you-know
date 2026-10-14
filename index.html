@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Look at two pairs of images. Guess their origins. Notice what changes after you know.">
+  <title>After You Know — A study of creative value</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="masthead"><a class="wordmark" href="./">After You Know<span class="brand-dot"></span></a><span class="header-note">AN EXPERIMENT IN LOOKING</span><button class="quiet" id="restart-top" hidden>Start again ↗</button></header>
+  <main>
+    <section class="intro" id="intro"><p class="eyebrow">HUMAN / AI / YOUR JUDGMENT</p><h1>Same image.<br><em>A different story.</em></h1><div class="intro-bottom"><p>What gives an image value?<br>Look first. Choose an origin. Then see whether<br class="desktop-break"> knowing the source changes how you feel.</p><span class="intro-aside">4 IMAGES<br>2 COMPARISONS<br>YOUR PERSPECTIVE</span></div></section>
+    <section id="experiment" aria-labelledby="group-title">
+      <div class="chapter"><div><span class="eyebrow" id="chapter-label">COMPARISON 01</span><h2 id="group-title">A sense of place</h2></div><div class="progress" aria-label="Progress"><span id="step1" class="active">01</span><i></i><span id="step2">02</span></div></div>
+      <p class="group-description" id="group-description">Two temple scenes. A quiet moment, or an imagined one?</p>
+      <div class="gallery">
+        <figure><button class="image-button" data-image="0" aria-label="Enlarge image A"><img id="image-a" src="temple-a.jpg" alt="Image A: temple entrance with green foliage"><span class="enlarge">View full image ↗</span></button><figcaption><span class="image-letter">A</span><span class="source-label" id="source-a">SOURCE HIDDEN</span></figcaption></figure>
+        <figure><button class="image-button" data-image="1" aria-label="Enlarge image B"><img id="image-b" src="temple-b.jpg" alt="Image B: temple roofs with golden foliage and mist"><span class="enlarge">View full image ↗</span></button><figcaption><span class="image-letter">B</span><span class="source-label" id="source-b">SOURCE HIDDEN</span></figcaption></figure>
+      </div>
+      <div class="interaction">
+        <section class="preference" id="before-panel"><p class="eyebrow">BEFORE YOU KNOW · OPTIONAL</p><h3>Which image do you prefer?</h3><div class="choice-row" id="before-choices" role="group" aria-label="Preference before reveal"><button data-pref="A" aria-pressed="false">Image A</button><button data-pref="B" aria-pressed="false">Image B</button><button data-pref="equal" aria-pressed="false">Both equally</button></div></section>
+        <section class="guess" id="guess-panel"><p class="eyebrow">THE SOURCE QUESTION</p><h3>How did these images come into being?</h3><p class="hint">Choose a combination to reveal the answer. Both images may share the same source.</p><div class="answer-grid" id="answers"><button data-answer="ai-ai"><span class="option-number">01</span><span>A: AI-generated <small>B: AI-generated</small></span><span class="option-arrow">↗</span></button><button data-answer="ai-camera"><span class="option-number">02</span><span>A: AI-generated <small>B: Camera photograph</small></span><span class="option-arrow">↗</span></button><button data-answer="camera-ai"><span class="option-number">03</span><span>A: Camera photograph <small>B: AI-generated</small></span><span class="option-arrow">↗</span></button><button data-answer="camera-camera"><span class="option-number">04</span><span>A: Camera photograph <small>B: Camera photograph</small></span><span class="option-arrow">↗</span></button></div></section>
+        <section id="feedback" class="feedback" hidden aria-live="polite" tabindex="-1"><p class="eyebrow" id="feedback-kicker"></p><h3 id="feedback-title"></h3><p id="feedback-answer"></p><p class="reflection" id="reflection"></p><div class="after-panel"><p class="eyebrow">AFTER YOU KNOW · OPTIONAL</p><h3>Which image do you prefer now?</h3><div class="choice-row" id="after-choices" role="group" aria-label="Preference after reveal"><button data-pref="A" aria-pressed="false">Image A</button><button data-pref="B" aria-pressed="false">Image B</button><button data-pref="equal" aria-pressed="false">Both equally</button></div><p id="change-message" class="change-message" aria-live="polite"></p></div><button id="next" class="primary">Next comparison <span>→</span></button></section>
+      </div>
+    </section>
+    <section class="results" id="results" hidden aria-labelledby="results-title"><p class="eyebrow">YOUR EXPERIENCE</p><h2 id="results-title">What changed<br><em>after you knew?</em></h2><div class="score"><strong id="score"></strong><span>source combinations<br>you identified correctly</span></div><div id="summary" class="summary"></div><div class="closing"><h3>Did the image change,<br>or did its story change?</h3><p>Liking an image and valuing it can be different things. What role did beauty, lived experience, or creative effort play in your judgment?</p></div><button id="restart" class="primary">Look again <span>↗</span></button><p class="privacy">These responses stay in this page. No responses are sent to a server.</p></section>
+    <section class="about"><p class="eyebrow">ABOUT THE PROJECT</p><p>This small experiment explores how authorship and context shape creative value. The pairings invite reflection, rather than a general conclusion about human or AI creativity.</p><details><summary>Image sources & project context <span>+</span></summary><p>The project owner supplied these four images and their source classifications. Both temple images and fashion image A are identified as AI-generated. Fashion image B is identified as a camera photograph. Photographer credits, generation tools, prompts, and editing histories have not yet been documented.</p><p>These samples differ in style, framing, and resolution. A preference change can have several causes. This website uses “camera photograph” as a source label, without implying an absence of editing or AI assistance.</p><p>The project builds on Professor Jung Choi’s feedback that value may depend on context, audience, and spectatorship.</p></details></section>
+  </main>
+  <footer><span>AFTER YOU KNOW</span><span>What does it mean to be human in the age of AI?</span></footer>
+  <dialog id="lightbox"><button id="close-lightbox" aria-label="Close full image">Close ×</button><img id="full-image" alt=""><p id="full-caption"></p></dialog>
+</body>
+</html>
+
