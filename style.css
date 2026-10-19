@@ -3,3 +3,5 @@
 
 /* Crop the narrow source-image border without changing the image content. */
 .art{overflow:hidden;background:transparent;line-height:0}.art img{height:auto;width:calc(100% + 12px);max-width:none;margin:-6px;clip-path:none;object-fit:initial}.curator-gallery{align-items:start}.curator-gallery figure{align-self:start}#lightbox{padding:55px 20px 18px}#full-image{clip-path:inset(6px);background:transparent}
+
+.selection-pair{padding:28px 0 36px;border-top:1px solid var(--line)}.selection-pair h3{font:28px Georgia,serif;margin-bottom:12px}.selection-pair .curator-gallery{margin-top:24px}
